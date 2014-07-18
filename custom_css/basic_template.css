@@ -27,6 +27,12 @@ p{
   color:#1C1D21;
 }
 
+.menu_h3{
+  font-size: 21px;
+  font-weight: 200;
+  color: #445878
+}
+
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -92,7 +98,7 @@ code{
 
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus{
     color: #92CDCF;
-    background-color: #transparent
+    background-color: transparent
 }
 
 .navbar-inverse .navbar-text {
