@@ -109,6 +109,10 @@ code{
     color: #fff;
 }
 
+.navbar-inverse .navbar-nav .active {
+    color: #92CDCF;
+}
+
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
     color: #92CDCF;
     background-color: transparent
