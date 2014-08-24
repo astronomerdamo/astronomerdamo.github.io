@@ -145,3 +145,7 @@ code{
     background-color: inherit;
     border-color: #586e75;
 }
+
+footer > p {
+  text-align: right;
+}
