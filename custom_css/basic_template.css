@@ -28,6 +28,11 @@ p {
   color: #839496;
 }
 
+.col-md-4 > p {
+  color: #93a1a1;
+  font-size: 12px;
+}
+
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
