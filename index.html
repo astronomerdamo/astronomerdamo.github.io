@@ -25,8 +25,9 @@
 
   <body>
 
+    <!-- NAVIGATION START -->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
+      <div class="container" >
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -40,41 +41,72 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li>
-              <a href="http://astronomerdamo.github.io/research/research.html">research/</a>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="http://astronomerdamo.github.io/research/research.html">research/</a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="live">
+                  <a href="http://astronomerdamo.github.io/research/research.html">Research Home</a>
+                </li>
+                <li class="divider"></li>
+                <li class="dead">
+                  <a href="#">Source Identification</a>
+                </li>
+                <li class="dead">
+                  <a href="#">Ultra High Vacuum</a>
+                </li>
+                <li class="dead">
+                  <a href="#">Timing Analysis</a>
+                </li>
+                <li class="dead">
+                  <a href="#">N-Body Simulation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="https://github.com/astronomerdamo">github/</a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo">GitHub Home</a>
+                </li>
+                <li class="divider"></li>
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo/pydcf">pydcf - Discrete Correlation Function</a>
+                </li>
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo/pyreject">pyreject - Rejection Sampling</a>
+                </li>
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo/mcmaster_thesis_template">McMaster University Thesis Template</a>
+                </li>
+              </ul>
             </li>
             <li>
-              <a href="https://github.com/astronomerdamo">github/</a>
+              <a href="docs/cv.pdf">cv</a>
             </li>
             <li>
-              <a href="docs/cv.pdf">cv/</a>
+              <a href="docs/resume.pdf">resume</a>
             </li>
-            <li>
-              <a href="docs/resume.pdf">resume/</a>
+            <li class="dead">
+              <a href="#">blog</a>
             </li>
           </ul>
-          <!--<ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#blog">blog/</a>
-            </li>
-            <li>
-              <a href="#classified">classified/</a>
-            </li>
-          </ul> -->
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
+    
+    <!-- NAVIGATION END-->
+    
     <!--CONTENT-->
 
     <div class="container">
+      <img src="images/perseus_solarized_dark2light.png"/>
       <h2>
         <i>Somewhere, something incredible is waiting to be known.</i>
       </h2>
       <h4>
         &nbsp&nbsp&nbsp&nbsp - Carl Sagan
       </h4>
-      <p>I am a graduate student at <a href="http://www.physics.mcmaster.ca/">McMaster University</a> working in Astrophysics. My current research involves analyzing giant molecular clouds for clues about how stars form and evolve. I work with and develop algorithms for finding sources and structure in 2D and 3D observational data sets. These methods borrow many techniques from computer vision and signal analysis.</p>
+      <p>I am a astrophysics graduate student at <a href="http://www.physics.mcmaster.ca/">McMaster University</a>. My current research involves analyzing giant molecular clouds for clues about how stars form and evolve. I work with and develop algorithms for finding sources and structure in 2D and 3D observational data sets. These methods borrow many techniques from computer vision and signal analysis.</p>
       <p>Past areas of research have involved the sporadic, high intensity radiation from the super massive black holes at the centers of active galaxies. The last glimpses of light before matter falls into the singularity are in X-ray and UV energy regimes, often from within light-hours of the black hole. I am also very interested in computer and numerical programming, and scientific computing. I aim to adopt <a href="http://en.wikipedia.org/wiki/Open_science">open science</a> practices by releasing my data, code, and results online whenever possible. I maintain a <a href="https://github.com/astronomerdamo">GitHub account</a> with tools I've developed and use regularly.</p>
     </div>
 
@@ -93,7 +125,7 @@
        </div>
         <div class="col-md-4">
           <h3>Resume</h3>
-          <p>Check out my succinct resume or if you would like to see more try the full <a href="docs/cv.pdf">CV</a>. Examples of my <a hrek="#">research</a> and <a href="https://github.com/astronomerdamo">GitHub repositories</a> are worth looking into as well.</p>
+          <p>Check out my succinct resume or if you would like to see more try the full <a href="docs/cv.pdf">CV</a>. Examples of my <a href="http://astronomerdamo.github.io/research/research.html">research</a> and <a href="https://github.com/astronomerdamo">GitHub repositories</a> are worth looking into as well.</p>
           <p><a class="btn btn-default" href="docs/resume.pdf" role="button">Resume</a></p>
         </div>
       </div>
@@ -116,5 +148,6 @@
     <script src="../bower_components/jquery/dist/jquery.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="custom_js/basic_template.js"></script>
   </body>
 </html>
