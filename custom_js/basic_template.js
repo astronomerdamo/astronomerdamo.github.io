@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
   
-  /* Rules for Solarized Light */
+  /* Colour rules for Solarized Light */
   
   $('.btn-light').click(function() {
     $('body').css('background-color', '#fdf6e3');
@@ -25,9 +25,15 @@ $(document).ready(function() {
     $('.dropdown-menu').css('background-color', '#eee8d5');
     $('.dropdown-menu').css('border-color', '#eee8d5');
     $('.divider').css('border-color', '#93a1a1');
+    
+    /* Change the header image from Dark to Light */
+    
+    var imgSrc = $('.banner-image').attr('src').replace("perseus_solarized_dark2light.png", "perseus_solarized_light2dark.png");
+    $('.banner-image').attr('src', imgSrc);
+    
   });
   
-  /* Rules for Solarized Dark */
+  /* Colour rules for Solarized Dark */
   
   $('.btn-dark').click(function() {
     $('body').css('background-color', '#002b36');
@@ -50,5 +56,11 @@ $(document).ready(function() {
     $('.dropdown-menu').css('background-color', '#073642');
     $('.dropdown-menu').css('border-color', '#073642');
     $('.divider').css('border-color', '#586e75');
+    
+    /* Change the header image from Light to Dark*/
+    
+    var imgSrc = $('.banner-image').attr('src').replace("perseus_solarized_light2dark.png", "perseus_solarized_dark2light.png");
+    $('.banner-image').attr('src', imgSrc);
+    
   });
 });
