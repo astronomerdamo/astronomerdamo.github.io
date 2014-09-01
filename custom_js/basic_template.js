@@ -1,4 +1,4 @@
-/* Personal additions to standrd bootstrap javascript
+/* Personal additions to standard bootstrap javascript
    Damien Robertson 2014 */
 
 "use strict";
@@ -46,7 +46,6 @@ $(document).ready(function() {
     
     var imgSrc = $('.banner-image').attr('src').replace("perseus_solarized_dark2light.png", "perseus_solarized_light2dark.png");
     $('.banner-image').attr('src', imgSrc);
-    
   });
   
   /* Colour rules for Solarized Dark */
@@ -77,6 +76,5 @@ $(document).ready(function() {
     
     var imgSrc = $('.banner-image').attr('src').replace("perseus_solarized_light2dark.png", "perseus_solarized_dark2light.png");
     $('.banner-image').attr('src', imgSrc);
-    
   });
 });
