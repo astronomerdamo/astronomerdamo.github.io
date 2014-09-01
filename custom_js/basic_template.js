@@ -1,9 +1,54 @@
 "use strict";
 
 $(document).ready(function() {
-  $('.drop-menu').hover(function(){
-    $(this).children('ul').fadeIn();
-  }, function(){
-    $(this).children('ul').fadeOut();
+  
+  /* Rules for Solarized Light */
+  
+  $('.btn-light').click(function() {
+    $('body').css('background-color', '#fdf6e3');
+    $('body').css('border-color', '#586e75');
+    $('body').css('color', '#657b83');
+    $('h2').css('color', '#586e75');
+    $('h3').css('color', '#586e75');
+    $('h4').css('color', '#586e75');
+    $('hr').css('border-color', '#93a1a1');
+    $('.btn-default').hover(function() {
+      $(this).css('background-color', '#eee8d5');
+    }, function() {
+      $(this).css('background-color', 'inherit');
+    });
+    $('.navbar-collapse').css('background-color', '#eee8d5');
+    $('.navbar-collapse').css('border-color', '#eee8d5');
+    $('.navbar-form').css('border-color', '#eee8d5');
+    $('.navbar-inverse').css('background-color', '#eee8d5');
+    $('.navbar-toggle').css('border-color', '#93a1a1');
+    $('.dropdown-menu').css('background-color', '#eee8d5');
+    $('.dropdown-menu').css('border-color', '#eee8d5');
+    $('.divider').css('border-color', '#93a1a1');
+  });
+  
+  /* Rules for Solarized Dark */
+  
+  $('.btn-dark').click(function() {
+    $('body').css('background-color', '#002b36');
+    $('body').css('border-color', '#93a1a1');
+    $('body').css('color', '#839496');
+    $('h2').css('color', '#93a1a1');
+    $('h3').css('color', '#93a1a1');
+    $('h4').css('color', '#93a1a1');
+    $('hr').css('border-color', '#586e75');
+    $('.btn-default').hover(function() {
+      $(this).css('background-color', '#073642');
+    }, function() {
+      $(this).css('background-color', 'inherit');
+    });
+    $('.navbar-collapse').css('background-color', '#073642');
+    $('.navbar-collapse').css('border-color', '#073642');
+    $('.navbar-form').css('border-color', '#073642');
+    $('.navbar-inverse').css('background-color', '#073642');
+    $('.navbar-toggle').css('border-color', '#586e75');
+    $('.dropdown-menu').css('background-color', '#073642');
+    $('.dropdown-menu').css('border-color', '#073642');
+    $('.divider').css('border-color', '#586e75');
   });
 });
