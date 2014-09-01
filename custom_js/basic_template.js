@@ -1,3 +1,6 @@
+/* Personal additions to standrd bootstrap javascript
+   Damien Robertson 2014 */
+
 "use strict";
 
 $(document).ready(function() {
