@@ -3,6 +3,19 @@
 
 "use strict";
 
+/* Function to decide the time of day which sets the
+   default solarized theme */
+
+function myTime() {
+  var currentDate = new Date();
+  var currentHour = currentDate.getHours();
+  if ((currentHour >= 6) && (currentHour < 18)) {
+    $('.btn-light').trigger('click');
+  } else {
+    $('.btn-dark').trigger('click');
+  };
+};
+
 $(document).ready(function() {
   
   /* Colour rules for Solarized Light */
