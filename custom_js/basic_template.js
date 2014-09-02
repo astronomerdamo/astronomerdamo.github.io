@@ -15,6 +15,10 @@ function myTime() {
 };
 
 $(document).ready(function() {
+  $('#cv_content').load('../docs/cv_content.html');
+});
+
+$(document).ready(function() {
   
   /* Colour rules for Solarized Light */
   
