@@ -11,8 +11,6 @@ function myTime() {
   var currentHour = currentDate.getHours();
   if ((currentHour >= 6) && (currentHour < 18)) {
     $('.btn-light').trigger('click');
-  } else {
-    $('.btn-dark').trigger('click');
   };
 };
 
@@ -44,7 +42,7 @@ $(document).ready(function() {
     
     /* Change the header image from Dark to Light */
     
-    var imgSrc = $('.banner-image').attr('src').replace("perseus_solarized_dark2light.png", "perseus_solarized_light2dark.png");
+    var imgSrc = $('.banner-image').attr('src').replace("perseus_rotWest.jpg", "perseus_rotEast.jpg");
     $('.banner-image').attr('src', imgSrc);
   });
   
@@ -72,9 +70,9 @@ $(document).ready(function() {
     $('.dropdown-menu').css('border-color', '#073642');
     $('.divider').css('border-color', '#586e75');
     
-    /* Change the header image from Light to Dark*/
+    /* Change the header image from Light to Dark */
     
-    var imgSrc = $('.banner-image').attr('src').replace("perseus_solarized_light2dark.png", "perseus_solarized_dark2light.png");
+    var imgSrc = $('.banner-image').attr('src').replace("perseus_rotEast.jpg", "perseus_rotWest.jpg");
     $('.banner-image').attr('src', imgSrc);
   });
 });
