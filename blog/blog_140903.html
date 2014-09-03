@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Astronomy, Astrophysics, Graduate Student, Scientific Computing, Data Science, Blog">
+    <meta name="description" content="Professional Page for Damien Robertson">
+    <meta name="author" content="Damien Robertson">
+
+    <title>Damien Robertson - Second Suns</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../custom_css/basic_template.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body onload="myTime();">
+
+    <!-- NAVIGATION START -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container" >
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand">
+            <a href="http://astronomerdamo.github.io/">Damien Robertson</a>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="http://astronomerdamo.github.io/research/research.html">research/</a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="live">
+                  <a href="http://astronomerdamo.github.io/research/research.html">Research Home</a>
+                </li>
+                <li class="divider"></li>
+                <li class="dead">
+                  <a href="#">Source Identification</a>
+                </li>
+                <li class="dead">
+                  <a href="#">Ultra High Vacuum</a>
+                </li>
+                <li class="dead">
+                  <a href="#">Timing Analysis</a>
+                </li>
+                <li class="dead">
+                  <a href="#">N-Body Simulation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="https://github.com/astronomerdamo">github/</a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo">GitHub Home</a>
+                </li>
+                <li class="divider"></li>
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo/pydcf">pydcf - Discrete Correlation Function</a>
+                </li>
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo/pyreject">pyreject - Rejection Sampling</a>
+                </li>
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo/astronomerdamo.github.io">Website</a>
+                </li>
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo/mcmaster_thesis_template">McMaster University Thesis Template</a>
+                </li>
+              </ul>
+            </li>
+            <li class='live'>
+              <a href="../docs/cv.html">cv</a>
+            </li>
+            <li class="live">
+              <a class='active' href="../blog/blog_main.html">blog</a>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    
+    <!-- NAVIGATION END-->
+    
+    <!--CONTENT-->
+
+    <div class="container">
+      
+      <h3>New Site | 14.09.03</h3>
+      
+      <p>Now that I've defended my thesis [yay!] I thought I was due for an update for my profesisonal website. The <a href="http://www.physics.mcmaster.ca/~roberd9/">old site is a bit of an eyesore</a> and doesn't feature a whole lot [read:any] of my work. Revamping my site has also given me an opportunity to learn more about web technologies and how HTML/CSS/JavaScript all function to produce modern websites.</p>
+      
+      <p>Instead of starting from scratch I adopted the <a href="http://getbootstrap.com">bootstrap framework</a>. Bootstrap is open source, actively developed and simple to use once you get the hang of how HTML/CSS/JS interact with each other. Bootstrap is also built to be responsive meaning that whatever device you open the site with it adjusts to fit perfectly - try resizing this window to a very narrow width like on a phone... you see how the content and menu <em>respond</em>.</p>
+      
+      <p>The next step involves defining your own style, colour scheme and layout. I chose to stick with a fairly clean layout, keeping only a sticky dropdown navbar up top. Thin, sans-serif font seems to be <a href="https://www.apple.com/ca/ios/">all</a> <a href="http://www.ubuntu.com/">the</a> <a href="http://windows.microsoft.com/en-ca/windows-8/meet">rage</a> these days so I adopted "Helvetica Neue" which defaults to the browser sans-serif writing if that font is missing. For colour schemes there was naturally only one choice, <a href="http://ethanschoonover.com/solarized">solarized</a>. I work mostly in the terminal and in text editors like <a href="http://www.vim.org/">vim</a> and solarized is really the best options for people who look at text and code all day. The scheme is brilliant, a light or dark mode where background and font colours are complimentary and easily swapped with accent colours working well wither either. It's high enough contrast without causing you to squint and not so contrasty that you get a headache. I personally use the dark scheme for my day-to-day but you can use either on this site by clicking the buttons in the footer. They look like this:</p>
+      
+      <p style="text-align: center"><a class="btn btn-dark" role="button">Solarized Dark</a> <a class="btn btn-light" role="button">Solarized Light</a></p>
+      
+      <p>Lastly, you can write custom javascript and have it run in addition to the Bootstrap javascript. I wrote a <a href="http://jquery.com/">jQuery</a> function which changes the website style when you click on those solarized dark/light buttons above. I also wrote a javascript function which selects a dark or light theme based on the time of day you look at this site:</p>
+      
+      <p>
+<pre>function myTime() {
+  var currentDate = new Date();
+  var currentHour = currentDate.getHours();
+  if ((currentHour >= 6) && (currentHour < 18)) {
+    $('.btn-light').trigger('click');
+  };
+};</pre>
+      </p>
+      
+      <p>This piece of code runs the light theme from 6 am to 5:59:59 pm and defaults back to the dark theme outside of those hours.</p>
+      
+      <p>Lastly, I'm still in the process of adding all of my past research and code to my site and <a href="https://github.com/astronomerdamo">GitHub</a> account so stay tuned. Also, if you like this website you can <a href="https://github.com/astronomerdamo/astronomerdamo.github.io">clone the whole thing off GitHub</a>.</p>
+
+    <!--FOOTER-->
+
+      <hr>
+
+      <footer>
+        <p>Contact: robertsondamien {at} gmail.com</p>
+        <p>&copy; Damien Robertson 2014 - Created using <a href="http://getbootstrap.com">bootstrap</a> with the awesome <a href="http://ethanschoonover.com/solarized">solarized</a> colour scheme.
+        </p>
+        <p><a class="btn btn-dark" role="button">Solarized Dark</a> <a class="btn btn-light" role="button">Solarized Light</a></p>
+      </footer>
+    </div>
+
+    <!--/CONTENT-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../custom_js/basic_template.js"></script>
+  </body>
+</html>
