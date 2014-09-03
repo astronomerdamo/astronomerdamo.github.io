@@ -30,6 +30,8 @@ $(document).ready(function() {
     $('h3').css('color', '#586e75');
     $('h4').css('color', '#586e75');
     $('hr').css('border-color', '#93a1a1');
+    $('code').css('background-color', '#eee8d5');
+    $('pre').css('background-color', '#eee8d5');
     $('.btn-default').hover(function() {
       $(this).css('background-color', '#eee8d5');
     }, function() {
@@ -60,6 +62,8 @@ $(document).ready(function() {
     $('h3').css('color', '#93a1a1');
     $('h4').css('color', '#93a1a1');
     $('hr').css('border-color', '#586e75');
+    $('code').css('background-color', '#073642');
+    $('pre').css('background-color', '#073642');
     $('.btn-default').hover(function() {
       $(this).css('background-color', '#073642');
     }, function() {

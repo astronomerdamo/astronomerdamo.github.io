@@ -47,13 +47,27 @@ hr {
   width: 100%;
 }
 code{
-  font-family: Courier;
-  padding: 4px 4px;
-  font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
+  font-family: Courier, monospace;
+  padding: 5px 5px 5px 30px;
+  margin: 0px;
+  font-size: inherit;
+  color: #859900;
+  background-color: #073642;
   white-space: nowrap;
   border-radius: 3px
+}
+pre {
+  font-family: Courier, monospace;
+  display: block;
+  padding: 5px 5px 5px 30px;
+  margin: 0px;
+  font-size: inherit;
+  color: #859900;
+  background-color: #073642;
+  border: 0px;
+  border-radius: 3px;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 /* NAVIGATION */
 .btn {
