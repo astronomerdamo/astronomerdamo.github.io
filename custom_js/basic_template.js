@@ -14,8 +14,25 @@ function myTime() {
   };
 };
 
+/* Script to load most current version of CV built from markdown file */
+
 $(document).ready(function() {
   $('#cv_content').load('../docs/cv_content.html');
+});
+
+/* Script for humorous alt text on certain words  */
+
+$(document).ready(function() {
+  $('.masterQuote').hover(function(){
+      var altText = $(this).attr('altText');
+      $('<p class="quote"></p>').html(altText).appendTo('.container').fadeIn('slow');
+    },function() {
+      $('.quote').remove();
+  }).mousemove(function(e) {
+      var mousex = e.pageX + 12;
+      var mousey = e.pageY + 12;
+      $('.quote').css({ top: mousey, left: mousex });
+    });
 });
 
 $(document).ready(function() {

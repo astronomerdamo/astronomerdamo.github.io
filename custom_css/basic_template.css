@@ -41,6 +41,12 @@ hr {
   padding-left: 15px;
   padding-right: 15px;
 }
+.inline-img {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  width: 100%;
+}
 .banner-image {
   margin-top: 25px;
   border-radius: 10px;
@@ -187,6 +193,7 @@ pre {
   background-color: inherit;
   font-family: inherit;
   font-weight: inherit;
+  cursor: default;
 }
 .navbar-inverse .navbar-nav .active {
   color: #b58900;
@@ -239,7 +246,8 @@ pre {
   font-weight: inherit;
 }
 .dropdown > .dropdown-menu > .live > a:hover,
-.dropdown > .dropdown-menu > .live > a:focus {
+.dropdown > .dropdown-menu > .live > a:focus,
+.dropdown > .dropdown-menu > .live  .active {
   color: #b58900;
   text-decoration: none;
   background-color: inherit;
@@ -259,6 +267,7 @@ pre {
   background-color: inherit;
   font-family: inherit;
   font-weight: inherit;
+  cursor: default;
 }
 .dropdown.open > .dropdown-toggle {
   color: #b58900;
@@ -298,9 +307,24 @@ pre {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dead > a:focus {
     color: #606060;
     background-color: transparent;
+    cursor: default;
   }
 }
 /* NAVIGATION */
 footer > p {
   text-align: right;
+}
+.masterQuote {
+  cursor: default;
+}
+.quote {
+  display:none;
+  position:absolute;
+  max-width: 800px;
+  background-color: #eee8d5;
+  border-radius:10px;
+  padding:10px;
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
 }
