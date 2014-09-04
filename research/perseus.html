@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Astronomy, Astrophysics, Graduate Student, Scientific Computing, Data Science">
+    <meta name="description" content="Professional Page for Damien Robertson">
+    <meta name="author" content="Damien Robertson">
+
+    <title>Damien Robertson - Second Suns</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../custom_css/basic_template.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body onload="myTime();">
+
+    <!-- NAVIGATION START -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container" >
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand">
+            <a href="http://astronomerdamo.github.io/">Damien Robertson</a>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="active dropdown-toggle" data-toggle="dropdown" href="http://astronomerdamo.github.io/research/research.html">research/</a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="live">
+                  <a href="http://astronomerdamo.github.io/research/research.html">Research Home</a>
+                </li>
+                <li class="divider"></li>
+                <li class="live">
+                  <a class="active" href="../research/perseus.html">Source Identification</a>
+                </li>
+                <li class="dead">
+                  <a href="#">Ultra High Vacuum</a>
+                </li>
+                <li class="dead">
+                  <a href="#">Timing Analysis</a>
+                </li>
+                <li class="dead">
+                  <a href="#">N-Body Simulation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="https://github.com/astronomerdamo">github/</a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo">GitHub Home</a>
+                </li>
+                <li class="divider"></li>
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo/pydcf">pydcf - Discrete Correlation Function</a>
+                </li>
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo/pyreject">pyreject - Rejection Sampling</a>
+                </li>
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo/astronomerdamo.github.io">Website</a>
+                </li>
+                <li class="live">
+                  <a href="https://github.com/astronomerdamo/mcmaster_thesis_template">McMaster University Thesis Template</a>
+                </li>
+              </ul>
+            </li>
+            <li class='live'>
+              <a href="../docs/cv.html">cv</a>
+            </li>
+            <li class="live">
+              <a href="../blog/blog_main.html">blog</a>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    
+    <!-- NAVIGATION END-->
+
+    <!--CONTENT-->
+
+    <div class="container">
+      
+      <h3>Summary</h3>
+      
+      <p>
+        <ul>
+          <li>Where/When: McMaster University, M.Sc. | Sept. 2012 - Aug. 2014</li>
+          <li>Research: Comparing prestellar core mass found in 3D (spatial-spatial-velocity) data with mass found from 2D (spatial-spatial) data.</li>
+          <li>Main Challenge: Source and structure finding algorithm testing and design.</li>
+          <li>Skills Learned: Python, SQL, R, IDL, Git, command line program design, algorithm design, utilizing and incorporating computer vision libraries, image analysis, Fast Fourier Transform algorithm, big data analysis, statistical analysis, machine learning - clustering and Markov Chain Monte Carlo applied to Bayesian inference.</li>
+        </ul>
+      </p>
+    
+      <hr>
+      
+      <h3>Introduction</h3>
+      
+      <p>The context of this work was a methodological test on how we (astronomers) find sources (prestellar cores) and structure (filaments) using automated source/structure finding algorithms on large, complex data.</p>
+    
+      <p>You might recognize the image below from this site's homepage. It's a part of a giant molecular cloud (nebula) in Perseus showing an area of about 30 light years across. The main star forming clump, top-middle of the image, is <a href="http://en.wikipedia.org/wiki/NGC_1333">NGC 1333</a> and can been seen as a reflection nebula by amateur astronomers. However, the image below isn't in visual wavelengths, rather, we are looking at this massive complex in far infrared. The structure you see that looks a lot like cirrus clouds are actually material that is <em>very</em> cold, about 30 Kelvin.</p>
+    
+      <a href="../images/perseus_solarized_dark2light.png"><img class="inline-img" src="../images/perseus_solarized_dark2light.png"/></a>
+    
+      <p>Stars, despite the energy and heat they produce when fully alive, must form from material that is just about as cold as absolute zero. In fact, in the images above you can clearly see these new prestellar cores (baby stars) as the little light dots. Those cores are stars in the process of forming, still gaining mass and fuel from Hydrogen and forming a dusty disk which will later gunk-up and produce planets. But not all cores show up as little round dots, some are dimmer, more diffuse and oddly shaped simply because they are younger.</p>
+    
+      <p>The variety of how prestellar cores are shaped present a challenge in how we spot them. I can hear a question you have already, why not just let someone (like a poor undergrad or grad student) comb through images by hand? The answers are many but the one I most quote is people, by and large, are terrible. We tire easily, become bored and emotional, are frustratingly inconsistent and are prone to flights of fantasy involving the superpowers of flight, strength and any combination of those two. Also, the data is huge (this image alone is 25 million pixels) and <a href="#" altText="Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space. <br> &nbsp&nbsp&nbsp&nbsp - <strong>Douglas Adams</strong>, <em>Hitchhiker's Guide to the Galaxy</em>" class="masterQuote">space is pretty large</a>.</p>
+    
+      <p>The need for dependable and fast algorithms in place of people is important. The image below shows the result of source and structure finding programs. The jump from the image above to the image below is not trivial but requires a lot of effort, this is where I come in. From a science perspective, this stage in star formation is among the last - the next stop is core ignition in the form of Hydrogen fusion. However, our understanding of the evolutionary process of stars is dependent on our estimates of prestellar core mass - which is then dependent on how we <em>find</em> the darn things.</p>
+    
+      <a href="../images/perseus_source_structure.png"><img class="inline-img" src="../images/perseus_source_structure.png"/></a>
+
+      <p>The above image shows a processed map of the top image. Instead of looking at cold material you are looking at where the mass (stuff, like gas and dust) is and in what amounts.  The red X's show the position of the core with it's size roughly corresponding the cores extent. The green skeleton trace out the prominent filamentary structure.</p>
+    
+    <!--FOOTER-->
+
+      <hr>
+
+      <footer>
+        <p>Contact: robertsondamien {at} gmail.com</p>
+        <p>&copy; Damien Robertson 2014 - Created using <a href="http://getbootstrap.com">bootstrap</a> with the awesome <a href="http://ethanschoonover.com/solarized">solarized</a> colour scheme.
+        </p>
+        <p><a class="btn btn-dark" role="button">Solarized Dark</a> <a class="btn btn-light" role="button">Solarized Light</a></p>
+      </footer>
+    </div>
+
+    <!--/CONTENT-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../custom_js/basic_template.js"></script>
+  </body>
+</html>
