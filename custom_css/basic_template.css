@@ -55,6 +55,7 @@ hr {
 code{
   font-family: Courier, monospace;
   /*padding: 5px 30px 5px 30px;*/
+  background-color: #073642;
   font-size: inherit;
   color: #859900;
   white-space: nowrap;
@@ -315,12 +316,15 @@ footer > p {
 }
 .masterQuote {
   cursor: default;
+  color: #cb4b16;
 }
 .quote {
   display: none;
   position: absolute;
   width: auto;
   opacity: 0.95;
+  background-color: #073642;
+  color: #93a1a1;
   border-radius: 10px;
   padding: 5px;
   margin: 5px 0px 5px 0px;
