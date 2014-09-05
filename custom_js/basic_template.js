@@ -19,21 +19,13 @@ $(document).ready(function() {
   /* Script for humorous alt text on certain words  */
   
   $('.masterQuote').hover(function(){
-      var altText = $(this).attr('altText');
-      $('<p class="quote"></p>').html(altText).appendTo('body').fadeIn('slow');
-      var quoteBackgroundColor = $('.navbar-collapse').css('background-color');
-      var quoteColor = $('h3').css('color');
-      $('.quote').css('background-color', quoteBackgroundColor);
-      $('.quote').css('color', quoteColor);
-    },function() {
-      $('.quote').fadeOut('slow', function() {
-        $(this).remove();
-      });
-  }).mousemove(function(e) {
-      var mx = e.pageX + 0;
-      var my = e.pageY + 12;
-      $('.quote').css({ top: my, left: mx });
-    });
+    var quoteID = $(this).attr('quoteID');
+    var boxWidth = $('.container');
+    $('.quote'+quoteID).css('width', boxWidth.width());
+    $('.quote'+quoteID).css('display', 'block');
+  }, function() {
+    $('.quote').css('display', 'none');
+  });
   
   /* Colour rules for Solarized Light */
   
@@ -47,6 +39,8 @@ $(document).ready(function() {
     $('hr').css('border-color', '#93a1a1');
     $('code').css('background-color', '#eee8d5');
     $('pre').css('background-color', '#eee8d5');
+    $('.quote').css('background-color', '#eee8d5');
+    $('.quote').css('color', '#586e75');
     $('.btn-default').hover(function() {
       $(this).css('background-color', '#eee8d5');
     }, function() {
@@ -79,6 +73,8 @@ $(document).ready(function() {
     $('hr').css('border-color', '#586e75');
     $('code').css('background-color', '#073642');
     $('pre').css('background-color', '#073642');
+    $('.quote').css('background-color', '#073642');
+    $('.quote').css('color', '#93a1a1');
     $('.btn-default').hover(function() {
       $(this).css('background-color', '#073642');
     }, function() {
