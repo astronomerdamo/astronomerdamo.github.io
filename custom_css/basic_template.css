@@ -319,15 +319,14 @@ footer > p {
 }
 .quote {
   display: none;
-  position: relative;
-  /*max-width: 800px;
-  width: inherit;*/
-  background-color: #073642;
-  color: #93a1a1;
-  border-radius: 0px;
+  position: absolute;
+  max-width: 600px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
   padding: 5px;
   margin: 5px 15px 5px 15px;
   font-size: inherit;
+  font-weight: inherit;
   cursor: pointer;
-  z-index: 7;
 }
