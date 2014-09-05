@@ -104,7 +104,7 @@
       
       <p>I wanted to come up with a way to show alternative text on certain words or phrases when you hovered over it. Why? Well, <a class="masterQuote" quoteID="quote1">I'm a funny guy</a><a class="quote" id="quote1">I'm <strong>not</strong></a>, so I thought I could <a class="masterQuote" quoteID="quote2">show off my wit</a>, <a class="quote" id="quote2">There are actually many uses for this feature not just to crack the occasional joke. I can show quotes, additional information to the reader, define acronyms or put explanations about certain bits of code.</a> to those who are interested.</p>
       
-      <p>So, here's how I did it... I googled, 'jQuery hover dialog appear', and found <a href="http://www.alessioatzeni.com/blog/simple-tooltip-with-jquery-only-text/">this great how-to</a> by Alessio Atzeni. This tutorial provided a starting point for me but I was looking for something slightly differnt that also fit my minimal solarized theme. I also wanted to treat short entries different from longer ones in how they appear. For example, in the first paragraph, hover the cursor over 'I'm a funny guy' and see a two word quip then over 'show off my with' and see a longer explanation. Depending on the window size you are viewing this page with they will show up differently.</p>
+      <p>So, here's how I did it... I googled, 'jQuery hover dialog appear', and found <a href="http://www.alessioatzeni.com/blog/simple-tooltip-with-jquery-only-text/">this great how-to</a> by Alessio Atzeni. This tutorial provided a starting point for me but I was looking for something slightly different that also fit my minimal solarized theme. I also wanted to treat short entries different from longer ones in how they appear. For example, in the first paragraph, hover the cursor over 'I'm a funny guy' and see a two word quip then over 'show off my with' and see a longer explanation. Depending on the window size you are viewing this page with they will show up differently.</p>
       
       <p>I'll illustrate this using one of my favourite quotes from one of my favourite books,
         <br>
@@ -121,11 +121,11 @@
         
         <pre>&lt;a class="masterQuote" quoteID="q1"&gt;green pieces of paper&lt;/a&gt;</pre>
       
-      is just the part of the quote we want to highlight for rollever. The second tag,
+      is just the part of the quote we want to highlight for rollover. The second tag,
       
         <pre>&lt;a class="quote" id="q1"&gt;Pretty sure this is about money, or Pokemon cards... not sure&lt;/a&gt;</pre>
       
-      is the alt-text comment you want to make on rollover. Notice the <code>quoteID</code> in th efirst tag is the same as the <code>id</code> in the second tag? This is how we target the rollever text. Ok, next is the style via css,
+      is the alt-text comment you want to make on rollover. Notice the <code>quoteID</code> in the first tag is the same as the <code>id</code> in the second tag? This is how we target the rollover text. Ok, next is the style via css,
       
         <pre>.masterQuote {
   cursor: default;
