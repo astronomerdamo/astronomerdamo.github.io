@@ -125,7 +125,7 @@
       
         <pre>&lt;a class="quote" id="q1"&gt;Pretty sure this is about money, or Pokemon cards... not sure&lt;/a&gt;</pre>
       
-      is the rollover comment you want to make. Notice the <code>quoteID</code> in th efirst tag is the same as the <code>id</code> in the second tag? This is how we target the rollever text. Ok, next is the style via css,
+      is the alt-text comment you want to make on rollover. Notice the <code>quoteID</code> in th efirst tag is the same as the <code>id</code> in the second tag? This is how we target the rollever text. Ok, next is the style via css,
       
         <pre>.masterQuote {
   cursor: default;
@@ -141,7 +141,7 @@
   cursor: pointer;
 }</pre>
       
-      which you can change to your heart's desire, but make sure to keep display: none and position: absolute, everything else is just style. Finally, the JavaScript to make everything go (note, you'll need to load jQuery!)
+      which you can change to your heart's desire, but make sure to keep display: none and position: absolute, everything else is just style. Finally, the JavaScript/jQuery to make everything go (note, you'll need to load jQuery!)
       
         <pre>$(document).ready(function (;
   $('.masterQuote').hover(function(event){
@@ -163,10 +163,10 @@
   });
 });</pre>
       
-      Ok, <a class="masterQuote" quoteID="quote3">don't panic</a><a class="quote" id="quote3">Ok, panic a little then shape up.</a> we can break this down line by line. The first and last line tell jQuery to run the script when the page is ready, duh. The second line targets the <code>masterQuote</code> class from the first <code>&lt;a&gt;</code> tag and says on hover run something, and off hover run something else. The on hover something simply displays the quote, and the off hover something removes the quote. This is done by manipulating the <code>display</code> css style from <code>none</code> (off) to <code>block</code> (on). On roll-off <code>display</code> is set back to <code>none</code>.
+      Ok, <a class="masterQuote" quoteID="quote3">don't panic</a><a class="quote" id="quote3">Ok, panic a little then shape up.</a> we can break this down line by line. The first and last line tell jQuery to run the script when the page is ready. The second line targets the <code>masterQuote</code> class from the first <code>&lt;a&gt;</code> tag and says on hover run something, and off hover run something else. The on hover something simply displays the alt-text, and the off hover something removes the slt-text. This is done by manipulating the <code>display</code> css style from <code>none</code> (off) to <code>block</code> (on). On roll-off <code>display</code> is set back to <code>none</code>.
       </p>
       
-      <p>Now to make sure we are showing the correct alt text we need to use the target id's, remember <code>q1</code>? Do this by <code>var quoteID = $(this).attr('quoteID');</code> which takes the variable stored in <code>quoteID</code> for the current (mouse on) link. The <code>if () {...} else {...}</code> is there to help out with alt text formatting. Personal preference for me, you may not need it. It's basically saying, if the quote is <a class="masterQuote" quoteID="quote4">short</a><a class="quote" id="quote4">I raised my hand into the thin air and grabbed 400 pixels long...</a> then display the alt text in place, below the cursor. However, if the quote is long make is span the page below the link. Here's the final product,</p>
+      <p>Now to make sure we are showing the correct alt-text we need to use the target id's, remember <code>q1</code>? Do this by <code>var quoteID = $(this).attr('quoteID');</code> which takes the variable stored in <code>quoteID</code> for the current (mouse on) link. The <code>if () {...} else {...}</code> is there to help out with alt-text formatting. Personal preference for me, you may not need it. It's basically saying, if the quote is <a class="masterQuote" quoteID="quote4">short</a><a class="quote" id="quote4">I raised my hand into the thin air and grabbed 400 pixels</a> then display the alt text in place, below the cursor. However, if the quote is long make is span the page below the link. Here's the final product,</p>
       
       <p>"This planet has - or rather had - a problem, which was this: most of the people living on it were unhappy for pretty much of the time. Many solutions were suggested for this problem, but most of these were largely concerned with the movement of small green pieces of paper, which was odd because on the whole it wasn't the small <a class="masterQuote" quoteID="q1">green pieces of paper</a><a class="quote" id="q1">Pretty sure this is about money, or Pokemon cards... not sure</a> that were unhappy."<br> &nbsp&nbsp&nbsp&nbsp - Douglas Adams, <em>The Hitchhiker's Guide to the Galaxy</em></p>
     
