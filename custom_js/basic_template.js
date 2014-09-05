@@ -16,15 +16,24 @@ function myTime() {
 
 $(document).ready(function() {
   
-  /* Script for humorous alt text on certain words  */
+  /* Script for alt text on certain words  */
   
   $('.masterQuote').hover(function(){
     var quoteID = $(this).attr('quoteID');
     var boxWidth = $('.container');
-    $('.quote'+quoteID).css('width', boxWidth.width());
-    $('.quote'+quoteID).css('display', 'block');
+    var quoteWidth = $('.quote#'+quoteID)
+    if (boxWidth.width() < quoteWidth.width()) {
+      $('.quote#'+quoteID).css('width', boxWidth.width());
+    } else {
+      $('.quote#'+quoteID).css('left', event.pageX);
+      $('.quote#'+quoteID).css('max-width', '400px');
+    };
+    $('.quote#'+quoteID).css('display', 'block');
   }, function() {
     $('.quote').css('display', 'none');
+    $('.quote').css('width', 'auto');
+    $('.quote').css('left', '');
+    $('.quote').css('max-width', '');
   });
   
   /* Colour rules for Solarized Light */

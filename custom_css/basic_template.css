@@ -54,26 +54,23 @@ hr {
 }
 code{
   font-family: Courier, monospace;
-  padding: 5px 5px 5px 30px;
-  margin: 0px;
+  /*padding: 5px 30px 5px 30px;*/
   font-size: inherit;
   color: #859900;
-  background-color: #073642;
   white-space: nowrap;
   border-radius: 3px
 }
 pre {
   font-family: Courier, monospace;
   display: block;
-  padding: 5px 5px 5px 30px;
-  margin: 0px;
+  padding: 5px 10px 5px 10px;
+  margin: 10px 10px 10px 10px;
   font-size: inherit;
   color: #859900;
   background-color: #073642;
   border: 0px;
   border-radius: 3px;
-  word-break: break-all;
-  word-wrap: break-word;
+  word-break: keep-all;
 }
 /* NAVIGATION */
 .btn {
@@ -320,12 +317,10 @@ footer > p {
 .quote {
   display: none;
   position: absolute;
+  width: auto;
   opacity: 0.95;
   border-radius: 10px;
   padding: 5px;
   margin: 5px 0px 5px 0px;
-  font-size: inherit;
-  font-weight: inherit;
   cursor: pointer;
-  z-index: 9;
 }
