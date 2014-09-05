@@ -71,6 +71,7 @@ pre {
   border: 0px;
   border-radius: 3px;
   word-break: keep-all;
+  overflow: scroll;
 }
 /* NAVIGATION */
 .btn {
