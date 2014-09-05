@@ -14,28 +14,26 @@ function myTime() {
   };
 };
 
-/* Script to load most current version of CV built from markdown file */
-
-$(document).ready(function() {
-  $('#cv_content').load('../docs/cv_content.html');
-});
-
 /* Script for humorous alt text on certain words  */
 
 $(document).ready(function() {
-  $('.masterQuote').hover(function(){
+  
+  $('.masterQuote').hover(function() {
+    $('.quote').css('display','block');
+  }, function() {
+    $('.quote').css('display','none');
+  });
+  
+  /*$('.masterQuote').hover(function(){
       var altText = $(this).attr('altText');
-      $('<p class="quote"></p>').html(altText).appendTo('.container').fadeIn('slow');
+      $('<p class="quote"></p>').html(altText).appendTo('.container').fadeIn('fast');
     },function() {
       $('.quote').remove();
-  }).mousemove(function(e) {
-      var mousex = e.pageX + 12;
-      var mousey = e.pageY + 12;
-      $('.quote').css({ top: mousey, left: mousex });
-    });
-});
-
-$(document).ready(function() {
+    }).mousemove(function(e) {
+      var mx = e.pageX + 12;
+      var my = e.pageY + 12;
+      $('.quote').css({ top: my, left: mx });
+    });*/
   
   /* Colour rules for Solarized Light */
   
@@ -49,6 +47,8 @@ $(document).ready(function() {
     $('hr').css('border-color', '#93a1a1');
     $('code').css('background-color', '#eee8d5');
     $('pre').css('background-color', '#eee8d5');
+    $('.quote').css('background-color', '#eee8d5');
+    $('.quote').css('color', '#586e75');
     $('.btn-default').hover(function() {
       $(this).css('background-color', '#eee8d5');
     }, function() {
@@ -81,6 +81,8 @@ $(document).ready(function() {
     $('hr').css('border-color', '#586e75');
     $('code').css('background-color', '#073642');
     $('pre').css('background-color', '#073642');
+    $('.quote').css('background-color', '#073642');
+    $('.quote').css('color', '#93a1a1');
     $('.btn-default').hover(function() {
       $(this).css('background-color', '#073642');
     }, function() {
@@ -100,4 +102,10 @@ $(document).ready(function() {
     var imgSrc = $('.banner-image').attr('src').replace("perseus_solarized_light2dark.png", "perseus_solarized_dark2light.png");
     $('.banner-image').attr('src', imgSrc); */
   });
+});
+
+/* Script to load most current version of CV built from markdown file */
+
+$(document).ready(function() {
+  $('#cv_content').load('../docs/cv_content.html');
 });

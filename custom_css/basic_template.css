@@ -318,13 +318,16 @@ footer > p {
   cursor: default;
 }
 .quote {
-  display:none;
-  position:absolute;
-  max-width: 800px;
-  background-color: #eee8d5;
-  border-radius:10px;
-  padding:10px;
-  color: inherit;
+  display: none;
+  position: relative;
+  /*max-width: 800px;
+  width: inherit;*/
+  background-color: #073642;
+  color: #93a1a1;
+  border-radius: 0px;
+  padding: 5px;
+  margin: 5px 15px 5px 15px;
   font-size: inherit;
   cursor: pointer;
+  z-index: 7;
 }
