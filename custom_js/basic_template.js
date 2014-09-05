@@ -18,7 +18,7 @@ $(document).ready(function() {
   
   /* Script for alt text on certain words  */
   
-  $('.masterQuote').hover(function(){
+  $('.masterQuote').hover(function(event){
     var quoteID = $(this).attr('quoteID');
     var boxWidth = $('.container');
     var quoteWidth = $('.quote#'+quoteID)
