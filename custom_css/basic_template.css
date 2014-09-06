@@ -223,6 +223,7 @@ pre {
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
   border-radius: 0px;
+  border-color: #073642;
   box-shadow: none;
 }
 .navbar-inverse .navbar-nav .open > a,
