@@ -71,9 +71,8 @@ pre {
   background-color: #073642;
   border: 0px;
   border-radius: 3px;
-  white-space: pre-wrap;
   z-index: 0;
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
 }
 /* NAVIGATION */
