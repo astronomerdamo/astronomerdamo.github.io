@@ -105,8 +105,14 @@ $(document).ready(function() {
   });
 });
 
-/* Script to load most current version of CV built from markdown file */
+/* Function to load most current version of CV built from markdown file */
 
 $(document).ready(function() {
   $('#cv_content').load('../docs/cv_content.html');
+});
+
+/* Function to load most current version of experience built from markdown file */
+
+$(document).ready(function() {
+  $('#exp_content').load('../docs/exp_content.html');
 });
