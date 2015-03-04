@@ -111,6 +111,12 @@ $(document).ready(function() {
   $('#cv_content').load('../docs/cv_content.html');
 });
 
+/* Function to load current blog links */
+
+$(document).ready(function() {
+  $('#blog_content').load('../blog/blog_content.html');
+});
+
 /* Function to load most current version of experience built from markdown file */
 
 $(document).ready(function() {
