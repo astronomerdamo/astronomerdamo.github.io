@@ -116,9 +116,3 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('#note_content').load('../note/note_content.html');
 });
-
-/* Function to load most current version of experience built from markdown file */
-
-$(document).ready(function() {
-  $('#proj_content').load('../docs/projects_content.html');
-});
