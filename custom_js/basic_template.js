@@ -120,5 +120,5 @@ $(document).ready(function() {
 /* Function to load most current version of experience built from markdown file */
 
 $(document).ready(function() {
-  $('#exp_content').load('../docs/exp_content.html');
+  $('#proj_content').load('../docs/projects_content.html');
 });
