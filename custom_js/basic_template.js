@@ -114,7 +114,7 @@ $(document).ready(function() {
 /* Function to load current blog links */
 
 $(document).ready(function() {
-  $('#blog_content').load('../blog/blog_content.html');
+  $('#note_content').load('../note/note_content.html');
 });
 
 /* Function to load most current version of experience built from markdown file */
