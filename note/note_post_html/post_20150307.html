@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Astronomy, Astrophysics, Graduate Student, Scientific Computing, Data Science">
+    <meta name="description" content="Professional Page for Damien Robertson">
+    <meta name="author" content="Damien Robertson">
+
+    <title>Damien Robertson</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../../custom_css/basic_template.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body onload="myTime();">
+
+    <!-- NAVIGATION START -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container" >
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand">
+            <a href="http://astronomerdamo.github.io/">Damien Robertson</a>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class='live'>
+              <a href="https://github.com/astronomerdamo">github</a>
+            </li>
+            <li class='live'>
+              <a href="../../docs/cv.html">cv</a>
+            </li>
+            <li class='live'>
+              <a class='active' href="../../note/note.html">notes</a>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    
+    <!-- NAVIGATION END-->
+    
+    <!--CONTENT-->
+
+    <div class="container">
+<h2 id="i-can-sed-and-you-can-too-2015-03-07"><a href="https://astronomerdamo.github.io/note/note_post_html/post_20150307.html">I can sed and you can too | 2015-03-07</a></h2>
+<p>The unix tool <a href="https://en.wikipedia.org/wiki/Sed">sed</a> (Stream EDitor) is a powerful text parsing utility that is pretty amazing to use. Historically, it comes in development after <a href="https://en.wikipedia.org/wiki/Grep">grep</a> but before <a href="https://en.wikipedia.org/wiki/AWK">AWK</a>. You can use sed to change, insert, delete and print out selected text from a file.</p>
+<p>Using the first thoughts of the whale that was called into existence in <em>Hitchhikers Guide to the Galaxy</em> as an example let's see what sed can do.</p>
+<pre><code>Ah . . . ! What&#39;s happening? it thought.
+Er, excuse me, who am I?
+Hello?
+Why am I here? What&#39;s my purpose in life?
+What do I mean by who am I?</code></pre>
+<p>For the purposes of this exercise this quote is going to be found in a file called <code>whale.txt</code>.</p>
+<h3 id="printing">Printing</h3>
+<p>Let's suppose we only wanted to print out a few lines of that quote instead of the whole thing. The sed syntax is:</p>
+<p><code>sed -n '/PATTERN/p' whale.txt</code></p>
+<p>Here the <code>-n</code> flag suppresses the full print out to the screen of the contents of <code>whale.txt</code> and <code>/PATTERN/p</code> prints out the line that contains the string <code>PATTERN</code>. So what if we want to print out the lines what start why 'W'?</p>
+<p><code>sed -n '/^W/p' whale.txt</code></p>
+<p>output:</p>
+<pre><code>Why am I here? What&#39;s my purpose in life?
+What do I mean by who am I?</code></pre>
+<p>Since <code>^W</code> is the pattern for the first word (<code>^</code>) on a line starting with the character 'W'. A very practical use might be to print out all the comments from a large file of code using <code>^#</code> (or whatever the comment character is) and pipe into a new file,</p>
+<p><code>sed -n '/^#/p' code.py &gt; code_comments.txt</code></p>
+<h3 id="deleting">Deleting</h3>
+<p>Like print, deleting lines requires replacing the <code>p</code> with a <code>d</code> and dropping the <code>-n</code> flag. For example, lets remove that 'Hello?' line:</p>
+<p><code>sed '/Hello?/d' whale.txt</code></p>
+<p>output:</p>
+<pre><code>Ah . . . ! What&#39;s happening? it thought.
+Er, excuse me, who am I?
+Why am I here? What&#39;s my purpose in life?
+What do I mean by who am I?</code></pre>
+<h3 id="search">Search</h3>
+<p>Sed can also search and replace using this syntax:</p>
+<p><code>sed 's/searchPATTERN/replacePATTERN/g' whale.txt</code></p>
+<p>The <code>s</code> is search, <code>g</code> is a global flag and is used to specify every occurrence of <code>searchPATTERN</code> found. What if instead of deleting 'Hello?' like in the previous section we simple replaced it with nothing?</p>
+<p><code>sed 's/Hello?//g' whale.txt</code></p>
+<p>output:</p>
+<pre><code>Ah . . . ! What&#39;s happening? it thought.
+Er, excuse me, who am I?
+
+Why am I here? What&#39;s my purpose in life?
+What do I mean by who am I?</code></pre>
+<p>Search and replace is incredibly powerful especially when you combine it with <a href="https://en.wikipedia.org/wiki/Regular_expression">regex</a> (REGular EXpression). The first line in the original quote shows the ellipses and exclamation mark all have preceding spaces.</p>
+<pre><code>Ah . . . ! What&#39;s happening? it thought.</code></pre>
+<p>We can remove these using two search clauses joined via a semi-colon:</p>
+<p><code>sed 's/ \./\./g; s/ !/!/g' whale.txt</code></p>
+<p>output only showing the first line:</p>
+<pre><code>Ah...! What&#39;s happening? it thought.</code></pre>
+<p>The period is a special character and requires backslash to tell the interpreter that it's a period and not a special character. What makes this approach more powerful than opening up a gui text editor and selecting 'find and replace' from the menu is that you have incredible control over the search pattern string. My name 'Damien' is often misspelled, I've seen 'Damian', 'Damion' and 'Damon' as common mistakes. However, using a standard find and replace in a regular text editor would miss these misspellings. You can easily accommodate this using sed,</p>
+<p><code>echo &quot;Damien, Damian, Damion, Damon&quot; | sed 's/Dam[a-z]*/Damien/g'</code></p>
+<p>output:</p>
+<pre><code>Damien, Damien, Damien, Damien</code></pre>
+<p>I've just told sed to match 'Dam' with as many lower case characters needed to complete the word and replace it with the correct spelling of my name.</p>
+<h3 id="insertion">Insertion</h3>
+<p>We can also automate the insertion of text into a file using sed. There is another part of the main quote that missing,</p>
+<pre><code>Calm down, get a grip now . . . oh! this is an interesting what is it?</code></pre>
+<p>We can insert this into <code>whale.txt</code> using the following syntax:</p>
+<p><code>sed '/searchPATTERN/rFILE' whale.txt</code></p>
+<p>Here sed will insert the contents of <code>FILE</code> into <code>whale.txt</code> <strong>after</strong> the line found in <code>searchPATTERN</code>. For example let's insert the missing line into the original quote after 'Hello?',</p>
+<p><code>sed '/Hello?/r./missing.txt' whale.txt</code></p>
+<p>output:</p>
+<pre><code>Ah . . . ! What&#39;s happening? it thought.
+Er, excuse me, who am I?
+Hello?
+Calm down, get a grip now . . . oh! this is an interesting what is it?
+Why am I here? What&#39;s my purpose in life?
+What do I mean by who am I?</code></pre>
+<p>Those pesky spaces are back so we can insert then do a search and replaces to show off,</p>
+<p><code>sed '/Hello?/r./missing.txt' whale.txt | sed 's/ \./\./g; s/ !/!/g'</code></p>
+<p>output:</p>
+<pre><code>Ah...! What&#39;s happening? it thought.
+Er, excuse me, who am I?
+Hello?
+Calm down, get a grip now... oh! this is an interesting what is it?
+Why am I here? What&#39;s my purpose in life?
+What do I mean by who am I?</code></pre>
+<p>I actually used this insertion command to build this very page along with the other notes on this site by inserting the note html into an empty web page and saving the combined html file.</p>
+<p>For more information about what sed can do check out <a href="http://www.grymoire.com/Unix/Sed.html" class="uri">http://www.grymoire.com/Unix/Sed.html</a>, or any of the links in the intro. Check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Special_characters_in_regular_expressions">regex</a> while you're at along with this nifty <a href="http://regexpal.com/">regex tester</a>.</p>
+
+    <!--FOOTER-->
+
+      <hr>
+
+      <footer>
+        <p>Contact: robertsondamien {at} gmail.com</p>
+        <p>&copy; Damien Robertson 2014-2015 - Created using <a href="http://getbootstrap.com">bootstrap</a> with the awesome <a href="http://ethanschoonover.com/solarized">solarized</a> colour scheme.
+        </p>
+        <p><a class="btn btn-dark" role="button">Solarized Dark</a> <a class="btn btn-light" role="button">Solarized Light</a></p>
+      </footer>
+    </div>
+
+    <!--/CONTENT-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../custom_js/basic_template.js"></script>
+  </body>
+</html>
