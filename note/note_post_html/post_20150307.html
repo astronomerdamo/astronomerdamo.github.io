@@ -73,6 +73,7 @@ What do I mean by who am I?</code></pre>
 <p>Let's suppose we only wanted to print out a few lines of that quote instead of the whole thing. The sed syntax is:</p>
 <p><code>sed -n '/PATTERN/p' whale.txt</code></p>
 <p>Here the <code>-n</code> flag suppresses the full print out to the screen of the contents of <code>whale.txt</code> and <code>/PATTERN/p</code> prints out the line that contains the string <code>PATTERN</code>. So what if we want to print out the lines what start why 'W'?</p>
+<p>input:</p>
 <p><code>sed -n '/^W/p' whale.txt</code></p>
 <p>output:</p>
 <pre><code>Why am I here? What&#39;s my purpose in life?
@@ -81,6 +82,7 @@ What do I mean by who am I?</code></pre>
 <p><code>sed -n '/^#/p' code.py &gt; code_comments.txt</code></p>
 <h3 id="deleting">Deleting</h3>
 <p>Like print, deleting lines requires replacing the <code>p</code> with a <code>d</code> and dropping the <code>-n</code> flag. For example, lets remove that 'Hello?' line:</p>
+<p>input:</p>
 <p><code>sed '/Hello?/d' whale.txt</code></p>
 <p>output:</p>
 <pre><code>Ah . . . ! What&#39;s happening? it thought.
@@ -91,6 +93,7 @@ What do I mean by who am I?</code></pre>
 <p>Sed can also search and replace using this syntax:</p>
 <p><code>sed 's/searchPATTERN/replacePATTERN/g' whale.txt</code></p>
 <p>The <code>s</code> is search, <code>g</code> is a global flag and is used to specify every occurrence of <code>searchPATTERN</code> found. What if instead of deleting 'Hello?' like in the previous section we simple replaced it with nothing?</p>
+<p>input:</p>
 <p><code>sed 's/Hello?//g' whale.txt</code></p>
 <p>output:</p>
 <pre><code>Ah . . . ! What&#39;s happening? it thought.
@@ -101,10 +104,12 @@ What do I mean by who am I?</code></pre>
 <p>Search and replace is incredibly powerful especially when you combine it with <a href="https://en.wikipedia.org/wiki/Regular_expression">regex</a> (REGular EXpression). The first line in the original quote shows the ellipses and exclamation mark all have preceding spaces.</p>
 <pre><code>Ah . . . ! What&#39;s happening? it thought.</code></pre>
 <p>We can remove these using two search clauses joined via a semi-colon:</p>
+<p>input:</p>
 <p><code>sed 's/ \./\./g; s/ !/!/g' whale.txt</code></p>
 <p>output only showing the first line:</p>
 <pre><code>Ah...! What&#39;s happening? it thought.</code></pre>
 <p>The period is a special character and requires backslash to tell the interpreter that it's a period and not a special character. What makes this approach more powerful than opening up a gui text editor and selecting 'find and replace' from the menu is that you have incredible control over the search pattern string. My name 'Damien' is often misspelled, I've seen 'Damian', 'Damion' and 'Damon' as common mistakes. However, using a standard find and replace in a regular text editor would miss these misspellings. You can easily accommodate this using sed,</p>
+<p>input:</p>
 <p><code>echo &quot;Damien, Damian, Damion, Damon&quot; | sed 's/Dam[a-z]*/Damien/g'</code></p>
 <p>output:</p>
 <pre><code>Damien, Damien, Damien, Damien</code></pre>
@@ -115,6 +120,7 @@ What do I mean by who am I?</code></pre>
 <p>We can insert this into <code>whale.txt</code> using the following syntax:</p>
 <p><code>sed '/searchPATTERN/rFILE' whale.txt</code></p>
 <p>Here sed will insert the contents of <code>FILE</code> into <code>whale.txt</code> <strong>after</strong> the line found in <code>searchPATTERN</code>. For example let's insert the missing line into the original quote after 'Hello?',</p>
+<p>input:</p>
 <p><code>sed '/Hello?/r./missing.txt' whale.txt</code></p>
 <p>output:</p>
 <pre><code>Ah . . . ! What&#39;s happening? it thought.
@@ -124,6 +130,7 @@ Calm down, get a grip now . . . oh! this is an interesting what is it?
 Why am I here? What&#39;s my purpose in life?
 What do I mean by who am I?</code></pre>
 <p>Those pesky spaces are back so we can insert then do a search and replaces to show off,</p>
+<p>input:</p>
 <p><code>sed '/Hello?/r./missing.txt' whale.txt | sed 's/ \./\./g; s/ !/!/g'</code></p>
 <p>output:</p>
 <pre><code>Ah...! What&#39;s happening? it thought.
