@@ -19,19 +19,12 @@ Profile
 Experience
 ----------
 
-__Affinio__ | __Data Scientist__. Ottawa, Ontario | Oct 2016 - Present
-
-* Create new and maintain existing data pipelines.
-* Data integrity and ETL tasks.
-* Data infrasctructure provisioning on AWS and Azure.
-* Research and develop new methods to extract KPI's.
-
-__Shopify__ | __Data Engineer__. Ottawa, Ontario | May 2015 - Oct. 2016
+__Shopify__ | __Data Engineer__. Ottawa, Ontario | May 2015 - Present
 
 * Team member of Risk Algorithms helping to minimize a number of financial risks through modelling and predictive analysis.
 * Model business processes using Apache Spark (PySpark), Cassandra, Kafka for business intelligence consumption.
 * ETL, data cleaning and reconciliation
-* Create custom data sources and reports using Tableau for business users.
+* Create custom data sources, data visualizations and reports for our business users.
 * Contribute to the evolution of Shopify's data pipeline framework.
 * Build out new data endpoints from core rails products and extract for data use.
 
