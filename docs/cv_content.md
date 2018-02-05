@@ -6,27 +6,58 @@ Damien Robertson - Curriculum Vitae
 Profile
 -------
 
-* B.Sc., M.Sc. degree in physics and astronomy.
-* Most recent experience with Python, Scala, SQL, Apache Spark, Ruby, php, git[hub] on Unix systems.
-* Deep experience with numerical programming in C++/Python/Fortran.
-* Experienced in full stack data science via data mining (acquisition), machine learning techniques and statistical analysis (classification), and data presentation (visualization) using primarily Python and supporting languages.
-* Advanced problem solving, troubleshooting and self-directed learning skills.
-* Curious, self-motivated, and capable of understanding complex phenomenon quickly.
-* Experience with scientific technical writing and technical presentations.
-* Three published scientific articles including one as lead author.
-* Participated in international collaborations with physicists, astronomers, and engineers.
+I am a enthusiastic and dedicated problem solver with a passion for science, technology, and learning. After attacking a problem, successful or not, I love sharing that knowledge. I enjoy working in a team to dig through and understand complex systems.
+
+Skills
+------
+
+* Data
+  * SQL, Spark, Kafka, Hadoop
+* Data Visualisation
+  * Tableau, Jupyter Notebooks, Mode Analytics
+* Programming
+  * Professional: Python, Ruby, Scala, Git VC on large codebases
+  * Hobby: Rust, Haskell
+* Analytics and Data as a Product
+  * Machine Learning: Python, Spark
+  * Ad hoc and Prototyping: Python, Jupyter Notebooks, R
+* Scripting
+  * Bash, grep, awk, sed [, \*nix cli tools]
 
 Experience
 ----------
 
-__Shopify__ | __Data Engineer__. Ottawa, Ontario | May 2015 - Present
+__Shopify__ | __Data Engineer__. Ottawa, Ontario | Mar. 2017 - Present
 
-* Team member of Risk Algorithms helping to minimize a number of financial risks through modelling and predictive analysis.
-* Model business processes using Apache Spark (PySpark), Cassandra, Kafka for business intelligence consumption.
-* ETL, data cleaning and reconciliation
-* Create custom data sources, data visualizations and reports for our business users.
-* Contribute to the evolution of Shopify's data pipeline framework.
-* Build out new data endpoints from core rails products and extract for data use.
+* Shopify Core - Logistics Data
+  * Championing data effort for merchant logistics.
+  * Working with teams across numerous logistic area including inventory, orders and fulfillments:
+    * Providing exploratory data to help define project scope.
+    * Identifying key performance indicators for launching projects and building out data pipelines to deliver data.
+    * Advising on data model construction to ensure potential for advanced analytics as product matures.
+
+* Risk Algorithms
+  * Championed operational effort to delivery timely data for risk evaluation.
+  * Maintained existing streaming data pipelines while developing new pipelines as required.
+
+__Affinio__ | __Data Scientist__. Ottawa, Ontario | Nov. 2016 - Mar. 2017
+
+* Created and maintained data pipelines using Spark, Hadoop, and a mix of many languages
+* Ensured integrity of extracted, transformed and delivered data.
+* Researched and developed new methods to extract useful metrics and quantitative measures.
+
+__Shopify__ | __Data Engineer__. Ottawa, Ontario | May 2015 - Nov. 2016
+
+* Finance and Risk Algorithms
+  * Used machine learning to help minimise a number of financial risks.
+  * Used predictive analysis to aid in adoption and success of financial services
+  * Developed ETL pipelines specifically for finance and risk needs.
+
+* Internal Data
+  * Engineered pipelines to extract and transform operational data into modelled data following Kimball methodology for numerous internal business areas
+  * Built new endpoints within Shopify to extract data for modelling efforts.
+  * Created data visualisations and reports for business users.
+  * Helped contribute to the evolution of Shopify's pipeline framework by introducing streaming data solutions
 
 __ShapeCapture__ | __Numerical Programmer__. Hamilton, Ontario | Oct. 2014 - Feb. 2015 (Part Time)
 
@@ -35,10 +66,10 @@ __ShapeCapture__ | __Numerical Programmer__. Hamilton, Ontario | Oct. 2014 - Feb
 
 __McMaster University__ | __Researcher__. Hamilton, Ontario | Sept. 2012 - Aug. 2014
 
-* Developed Python programs utilizing the scikit-image library to combine multi-wavelength, multi-instrument infrared, and radio observations of star forming regions in two and three dimensions.
+* Developed Python programs utilising the scikit-image library to combine multi-wavelength, multi-instrument infrared, and radio observations of star forming regions in two and three dimensions.
 * Created Python programs for astronomical structure identification in data sets.
 * Setup, maintained, and queried SQL databases of pre-stellar cores.
-* Utilized machine learning to cluster massive pre-stellar core candidate lists.
+* Utilised machine learning to cluster massive pre-stellar core candidate lists.
 * Developed analysis criteria for evaluating source finding algorithm efficacy.
 
 __Tri-University Meson Facility (TRIUMF), TITAN__ | __Researcher__. Vancouver, British Columbia | May 2011 - Aug. 2011
@@ -49,7 +80,7 @@ __Tri-University Meson Facility (TRIUMF), TITAN__ | __Researcher__. Vancouver, B
 
 __Saint Mary's University__ | __Researcher__. Halifax, Nova Scotia | May 2009 - Sept. 2012
 
-* Utilized data reduction pipelines in Bash, C++ to process X-ray and UV observations of active galaxies.
+* Utilised data reduction pipelines in Bash, C++ to process X-ray and UV observations of active galaxies.
 * Created and maintained bulk data sets, mined data for exploration, and quantity correlation.
 * Created Python program to correlate unevenly sampled time series.
 * Published paper on time series analysis, worked based on undergraduate thesis.
@@ -94,7 +125,7 @@ __Robertson, D.__, Gallo, L.C., Fulford, K. (2010) _Investigating the Relationsh
 Teaching and Outreach
 ---------------------
 
-###McMaster University. Hamilton, Ontario
+### McMaster University. Hamilton, Ontario
 
 - __William J. McCallion Planetarium__ - Dr. Robert Cockcroft | Apr. 2013 - Oct. 2014
 
@@ -116,7 +147,7 @@ Teaching and Outreach
     * Astronomy: Physics for Life Sciences (PHY 1L03).
     * Taught two hour tutorial course, maintained office hours for questions and administered student quizzes.
 
-###Saint Mary's University. Halifax, Nova Scotia
+### Saint Mary's University. Halifax, Nova Scotia
 
 - __Burke Gaffney Observatory Tour Guide__ - David Lane | May 2010 - Apr. 2012
 
@@ -150,4 +181,3 @@ Awards
 * William Chisholm Scholarship - 2009
 * SMU, First Place - Sixth Annual SMU Undergraduate Mini-Symposium - 2009
 * Dean's List (SMU) - 2008 - 2011
-
