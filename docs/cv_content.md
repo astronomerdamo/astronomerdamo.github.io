@@ -42,7 +42,7 @@ __Shopify__ | __Data Engineer__. Ottawa, Ontario | Mar. 2017 - Present
 
 __Affinio__ | __Data Scientist__. Ottawa, Ontario | Nov. 2016 - Mar. 2017
 
-* Created and maintained data pipelines using Spark, Hadoop, and a mix of many languages
+* Created and maintained data pipelines using Spark, Hadoop, and a mix of many languages.
 * Ensured integrity of extracted, transformed and delivered data.
 * Researched and developed new methods to extract useful metrics and quantitative measures.
 
@@ -50,14 +50,14 @@ __Shopify__ | __Data Engineer__. Ottawa, Ontario | May 2015 - Nov. 2016
 
 * Finance and Risk Algorithms
   * Used machine learning to help minimise a number of financial risks.
-  * Used predictive analysis to aid in adoption and success of financial services
+  * Used predictive analysis to aid in adoption and success of financial services.
   * Developed ETL pipelines specifically for finance and risk needs.
 
 * Internal Data
-  * Engineered pipelines to extract and transform operational data into modelled data following Kimball methodology for numerous internal business areas
+  * Engineered pipelines to extract and transform operational data into modelled data following Kimball methodology for numerous internal business areas.
   * Built new endpoints within Shopify to extract data for modelling efforts.
   * Created data visualisations and reports for business users.
-  * Helped contribute to the evolution of Shopify's pipeline framework by introducing streaming data solutions
+  * Helped contribute to the evolution of Shopify's pipeline framework by introducing streaming data solutions.
 
 __ShapeCapture__ | __Numerical Programmer__. Hamilton, Ontario | Oct. 2014 - Feb. 2015 (Part Time)
 
